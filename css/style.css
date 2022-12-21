@@ -183,3 +183,62 @@ body{
     width: calc(100% - 194.4px);
     text-align: right;
 }
+
+
+/* chat */
+
+
+/* input */
+.input-chat-container{
+    background-color: #F3EEEA;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-chat-container input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-chat-container i{
+    margin: 0 30px;
+    font-size: 20px;
+    color: grey;
+}
+
+/* chat screen */
+
+.chat-screen{
+    height: calc(100% - 50px);
+    background: url(../img/mine.jpg);
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.sent-message, .received-message{
+    border-radius: 8px ;
+    min-width: 40%;
+    width: fit-content;
+    padding: 10px;
+}
+
+.sent-message{
+    background-color: #D5F9BA;
+    align-self: flex-end;
+}
+
+.received-message{
+    background-color: white;
+}
+
+.date-message{
+    font-size: 10px;
+    color:#B1B1B1;
+    text-align: right;
+}
