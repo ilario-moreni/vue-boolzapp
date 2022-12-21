@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body{
+    background: linear-gradient(to top, #dde8e8 , #DDDBD1 85%, #009688 85%);
+    height: 100vh;
+    padding: 2rem 0;
+}
+
+#app{
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* top row */
+.top-row{
+    background-color: #EAEAEA;
+    display: flex;
+}
+
+.top-row .col-30{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    border-right: 1px solid #D7D7D7;
+    height: 100%;
+    padding: 10px;
+}
+
+.top-row .col-70{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.avatarBox{
+    display: flex;
+}
+
+.avatarBox img{
+    border-radius: 100%;
+    width: 50px;
+}
+
+.my-avatar-name{
+    align-self: center;
+}
+
+.col-30 .iconSettings{
+    color: #B1B1B1;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.col-70 .iconSettings{
+    color: #B1B1B1;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.my-icon{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.color-grey{
+    color: #9BA9B0;
+    font-size: 12px;
+}
+
+.avatarNameAndLog{
+    padding-top: 10px;
+    padding-left: 10px;
+}
