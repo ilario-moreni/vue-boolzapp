@@ -39,12 +39,43 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-30"></div>
+            <div class="main-row">
+                <div class="col-30">
+                    <div class="activate-notification">
+                        <div class="fa-bell-slash-container">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div>
+                            <p class="bold">Ricevi notifiche di nuovi messaggi</p>
+                            <a class="color-grey" href="#">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <div class="search-contacts-container">
+                        <button><i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <input placeholder="Cerca o inizia una nuova chat"  type="text">
+                    </div>
+                    <div class="contacts-list-container">
+                        <div class='contact' v-for="(obj, index) in contacts">
+                            <div class="avatarBox">
+                                <img :src="`./img/avatar${obj.avatar}.jpg`" :alt="obj.name">
+                                <div class="avatarNameAndLog">
+                                    <span class="my-avatar-name">{{ obj.name }}</span>
+                                    <div class="color-grey">
+                                        Ultimo messaggio inviato
+                                    </div>
+                                </div>
+                                <div class="last-log-contact">
+                                    12:00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-70"></div>
-            </div> -->
+            </div>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="./js/script.js"></script>
+        <script type="text/javascript" src="./js/script.js"></script>
     </body>
 </html>

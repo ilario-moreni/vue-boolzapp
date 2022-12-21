@@ -3,13 +3,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    font-size: 14px;
 }
 
 body{
     background: linear-gradient(to top, #dde8e8 , #DDDBD1 85%, #009688 85%);
     height: 100vh;
     padding: 2rem 0;
+    font-size: 14px;
 }
 
 #app{
@@ -19,7 +19,32 @@ body{
     margin: 0 auto;
 }
 
+.col-30, .col-70{
+    height: 100%;
+}
 
+.col-30{
+    width: 30%;
+    border-right: 1px solid #D7D7D7;
+}
+
+.col-70{
+    width: 70%;
+}
+
+
+
+
+/* common */
+
+.bold{
+    font-weight: bold;
+}
+
+.color-grey{
+    color: #899499;
+    font-size: 12px;
+}
 
 
 
@@ -32,15 +57,10 @@ body{
 .top-row .col-30{
     display: flex;
     justify-content: space-between;
-    width: 30%;
-    border-right: 1px solid #D7D7D7;
-    height: 100%;
     padding: 10px;
 }
 
 .top-row .col-70{
-    width: 70%;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -81,12 +101,85 @@ body{
     margin-left: 20px;
 }
 
-.color-grey{
-    color: #9BA9B0;
-    font-size: 12px;
-}
 
 .avatarNameAndLog{
     padding-top: 10px;
     padding-left: 10px;
+}
+
+/* main row */
+
+.main-row{
+    height: calc(100% - 70px);
+    display: flex;
+}
+
+/* side (contact) */
+
+.activate-notification{
+    background-color: #8EDAFC;
+    align-items: center;
+    display: flex;
+    height: 70px;
+}
+
+.fa-bell-slash-container{
+    margin: 0 1rem;
+    color: #8EDAFC;
+    background-color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search-contacts-container{
+    display: flex;
+    background-color: #FAFAFA;
+    padding: 5px;
+    height: 40px;
+}
+
+.search-contacts-container i{
+    color:#B5B9BB;
+    width: 15px;
+}
+
+.search-contacts-container button{
+    width: 20%;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+}
+
+.search-contacts-container input{
+    width: 80%;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 0 5px 5px 0;
+    padding-left: 5px;
+}
+
+.contacts-list-container{
+    overflow-y: scroll;
+    max-height: calc(100% - 110px)
+}
+
+.contact{
+    padding: 10px 10px 10px 15px;
+    border-top: 1px solid #E9EBEB;
+}
+
+.contact:hover{
+    background-color:#E9EBEB ;
+}
+
+.last-log-contact{
+    font-size: 10px;
+    color: #B1B1B1;
+    width: calc(100% - 194.4px);
+    text-align: right;
 }
