@@ -24,9 +24,9 @@
                 </div>
                 <div class="col-70">
                     <div class="avatarBox">
-                        <img src="./img/avatar_1.jpg" alt="">
+                        <img :src="`./img/avatar${contacts[chatId].avatar}.jpg`" alt="">
                         <div class="avatarNameAndLog">
-                            <span class="my-avatar-name">Michele</span>
+                            <span class="my-avatar-name">{{ contacts[chatId].name }}</span>
                             <div class="color-grey">
                                 Ultimo accesso oggi alle 12:00
                             </div>
@@ -56,11 +56,12 @@
                         <input placeholder="Cerca o inizia una nuova chat"  type="text">
                     </div>
                     <div class="contacts-list-container">
-                        <div class='contact' v-for="(obj, index) in contacts">
+                        <div class='contact' v-for="(obj, index) in contacts" @click="selectChat(index)">
                             <div class="avatarBox">
                                 <img :src="`./img/avatar${obj.avatar}.jpg`" :alt="obj.name">
                                 <div class="avatarNameAndLog">
-                                    <span class="my-avatar-name">{{ obj.name }}</span>
+                                    <span class="my-avatar-name">{{ obj.name }}
+                                    </span>
                                     <div class="color-grey">
                                         Ultimo messaggio inviato
                                     </div>
@@ -74,16 +75,12 @@
                 </div>
                 <div class="col-70">
                     <div class="chat-screen">
-                        <div class="sent-message">Ciao
+                        <div v-for="item in contacts[chatId].messages" :class="item.status == 'sent' ? 'sent-message' : 'received-message'">
+                            {{item.message}}
                             <div class="date-message">
-                                ora
+                                {{ item.date }}
                             </div>
-                        </div>
-                        <div class="received-message">Ciao
-                            <div class="date-message">
-                                alle 14:45
-                            </div>
-                        </div>
+                        </div>         
                     </div>
                     <div class="input-chat-container">
                         <div><i class="fa-regular fa-face-smile"></i></div>

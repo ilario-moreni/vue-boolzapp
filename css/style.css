@@ -218,6 +218,7 @@ body{
     padding: 30px 80px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 
@@ -238,6 +239,7 @@ body{
 }
 
 .date-message{
+    margin-top: 10px;
     font-size: 10px;
     color:#B1B1B1;
     text-align: right;

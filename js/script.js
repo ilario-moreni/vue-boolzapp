@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            chatId: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -167,5 +168,10 @@ createApp({
                 }
             ]
         }
-    }
+    },
+    methods: {
+        selectChat(id){
+            return this.chatId = id;
+        }
+    },
 }).mount('#app')
