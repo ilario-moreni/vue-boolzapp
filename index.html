@@ -53,10 +53,10 @@
                     <div class="search-contacts-container">
                         <button><i class="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <input placeholder="Cerca o inizia una nuova chat"  type="text">
+                        <input placeholder="Cerca o inizia una nuova chat" v-model="searchContactInput" @keyup="searchContact(searchContactInput)" type="text">
                     </div>
                     <div class="contacts-list-container">
-                        <div class='contact' v-for="(obj, index) in contacts" @click="selectChat(index)">
+                        <div class='contact' v-for="(obj, index) in contacts" :class="obj.visible? '' : 'display-none'" @click="selectChat(index)">
                             <div class="avatarBox">
                                 <img :src="`./img/avatar${obj.avatar}.jpg`" :alt="obj.name">
                                 <div class="avatarNameAndLog">

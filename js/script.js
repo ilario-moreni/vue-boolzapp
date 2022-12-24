@@ -3,6 +3,7 @@ const { createApp } = Vue;
 createApp({
     data(){
         return{
+            searchContactInput: '',
             chatId: 0,
             newMessage: '',
             contacts: [
@@ -196,6 +197,15 @@ createApp({
             }
             let currentChat = this.contacts[this.chatId];
             currentChat.messages.push(okMessage)
+        },
+        searchContact(inputValue){ 
+            this.contacts.forEach((elem) =>{
+                if(elem.name.toLowerCase().includes(inputValue.toLowerCase())){
+                    elem.visible = true
+                } else {
+                    elem.visible = false;
+                }
+            })
         }
     },
 }).mount('#app')
